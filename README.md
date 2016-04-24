@@ -1,3 +1,20 @@
+## Update with instructions from user
+Dataset has been downloaded from the UCI website and placed directly in the Github folder.  This allows R to import it directly from that folder instead of using the web address.  Several steps were needed to clean the data.  This code is repeated in all four R files.
+1) Date and Time fields were combined into a single POSIXlt.  Time was initially formatted as character to avoid issues with producing the wrong date.  The result allows the graphs to flow correctly, plotting results from each minute over a two-day span.
+2) All other fields were ultimately converted to numeric format.  They passed through character formats to avoid issues with converting directory from factor.
+3) Using Date, two days of observations were stripped out according to the instructions.
+
+The code for creating and exporting graphs is contained in each of the R files.
+
+Plot1 is a histogram which counts frequency of global active power.  It includes proper labels as requested in the assignment.
+Plot2 is a line plot of global active power readings over the course of two days.  Breaks were specified to display days of the week on the X axis.  X label was specified as blank since it would otherwise default to the variable name.
+Plot3 shows each of the three Sub metering fields on a single graph.  Sub metering 1 is shown in the base graph while the other two are added using their own unique colors.  A legend was added in the upper right corner.  Its appearance differs betweeen the plot window in R Studio, zoomed plot window and png files.  Spaces were added to the label names so it wouldn't cut off when exporting to png.
+Plot4 is a panel of four graphs.  The first two were identical to plot2 and plot3.  Two more plots were added.  There are very similar to plot2 but use voltage and global reactive power readings.
+
+All png plots and R code files are saved separated in the Github directory.
+
+The orignal instructions are provided below.
+
 ## Introduction
 
 This assignment uses data from
